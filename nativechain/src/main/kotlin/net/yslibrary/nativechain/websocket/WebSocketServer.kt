@@ -135,7 +135,7 @@ class WebSocketServer(val nativechain: Nativechain, val moshi: Moshi) {
         val latestBlockHeld = nativechain.getLatestBlock()
         if (latestBlockReceived.index > latestBlockHeld.index) {
             logger.info("received blockchain is ahead of ours. current head: ${latestBlockHeld.index}, received head: ${latestBlockReceived.index}")
-            if (latestBlockHeld.hash === latestBlockReceived.previousHash) {
+            if (latestBlockHeld.hash == latestBlockReceived.previousHash) {
                 logger.info("we have previous hash for the received chain")
                 nativechain.addBlock(latestBlockReceived)
                 broadcastLatestMessage()
