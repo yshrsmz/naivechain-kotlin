@@ -1,0 +1,14 @@
+buildscript {
+    ext.kotlin_version = '1.2.40'
+    ext.ktor_version = '0.9.2'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+group 'net.yslibrary'
+version '1.0-SNAPSHOT'
