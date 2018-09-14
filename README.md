@@ -1,4 +1,4 @@
-nativechain-kotlin
+naivechain-kotlin
 ===
 
 ```shell
